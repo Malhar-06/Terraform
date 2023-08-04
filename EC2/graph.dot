@@ -1,0 +1,38 @@
+digraph {
+	compound = "true"
+	newrank = "true"
+	subgraph "root" {
+		"[root] aws_instance.Instance (expand)" [label = "aws_instance.Instance", shape = "box"]
+		"[root] aws_key_pair.key-tf (expand)" [label = "aws_key_pair.key-tf", shape = "box"]
+		"[root] aws_security_group.sg-terraform (expand)" [label = "aws_security_group.sg-terraform", shape = "box"]
+		"[root] data.aws_ami.amazon-linux (expand)" [label = "data.aws_ami.amazon-linux", shape = "box"]
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" [label = "provider[\"registry.terraform.io/hashicorp/aws\"]", shape = "diamond"]
+		"[root] var.access_key" [label = "var.access_key", shape = "note"]
+		"[root] var.image_name" [label = "var.image_name", shape = "note"]
+		"[root] var.instance_type" [label = "var.instance_type", shape = "note"]
+		"[root] var.owner_id" [label = "var.owner_id", shape = "note"]
+		"[root] var.ports" [label = "var.ports", shape = "note"]
+		"[root] var.secret_key" [label = "var.secret_key", shape = "note"]
+		"[root] aws_instance.Instance (expand)" -> "[root] aws_key_pair.key-tf (expand)"
+		"[root] aws_instance.Instance (expand)" -> "[root] aws_security_group.sg-terraform (expand)"
+		"[root] aws_instance.Instance (expand)" -> "[root] data.aws_ami.amazon-linux (expand)"
+		"[root] aws_instance.Instance (expand)" -> "[root] var.instance_type"
+		"[root] aws_key_pair.key-tf (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_security_group.sg-terraform (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_security_group.sg-terraform (expand)" -> "[root] var.ports"
+		"[root] data.aws_ami.amazon-linux (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] data.aws_ami.amazon-linux (expand)" -> "[root] var.image_name"
+		"[root] data.aws_ami.amazon-linux (expand)" -> "[root] var.owner_id"
+		"[root] output.ami_id (expand)" -> "[root] data.aws_ami.amazon-linux (expand)"
+		"[root] output.keyname (expand)" -> "[root] aws_key_pair.key-tf (expand)"
+		"[root] output.securityGroupDetails (expand)" -> "[root] aws_security_group.sg-terraform (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_instance.Instance (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" -> "[root] var.access_key"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" -> "[root] var.secret_key"
+		"[root] root" -> "[root] output.ami_id (expand)"
+		"[root] root" -> "[root] output.keyname (expand)"
+		"[root] root" -> "[root] output.securityGroupDetails (expand)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+	}
+}
+
