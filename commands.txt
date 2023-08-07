@@ -1,0 +1,865 @@
+In this file I have pasted the commands which I used throughout the course.
+
+   1  sudo yum install -y yum-utils shadow-utils
+    2  sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+    3  sudo yum -y install terraform
+    4  terraform -v
+    5  pwd
+    6  mkdir Terraform
+    7  cd Terraform/
+    8  vi hello-world.tf
+    9  terraform plan
+   10  vi hello-world.tf
+   11  terraform plan
+   12  vi first.tf.json
+   13  terraform plan
+   14  vi first.tf.json
+   15  vi hello-world.tf
+   16  cat hello-world.tf
+   17  cat first.tf.json
+   18  terraform plan
+   19  vi malhar.tf
+   20  cat malhar.tf
+   21  terraform plan
+   22  vi malhar.tf.json
+   23  ls
+   24  cat malhar.tf.json
+   25  cat malhar.tf.
+   26  cat malhar.tf
+   27  rm -rf malhar.tf.json malhar.tf
+   28  ls
+   29  mkdir hello-variable
+   30  cd hello-variable/
+   31  vi variable
+   32  terraform plan
+   33  touch variable.tf
+   34  mv variable variable.tf
+   35  cat variable.tf
+   36  mv variable variable.tf
+   37  cat variable.tf
+   38  terraform plan
+   39  rm variable
+   40  ls
+   41  vi variable.tf
+   42  vim variable.tf
+   43  vi variable.tf
+   44  cat  variable.tf
+   45  terraform plan
+   46  vi variable.tf
+   47  ls
+   48  cd T
+   49  cd Terraform/
+   50  ls
+   51  cd hello-variable/
+   52  ls
+   53  vi list_variable.tf
+   54  cat list_variable.tf
+   55  cat variable.tf
+   56  vi variable.tf
+   57  cat variable.tf
+   58  vi variable.tf
+   59  cat variable.tf
+   60  vi variable.tf
+   61  cat variable.tf
+   62  terraform plan
+   63  terraform plan -var 'names=["jayu","archu","vaishu"]'
+   64  touch function1.tf
+   65  vi function1.tf
+   66  cat function1.tf
+   67  terraform plan -var 'names=["jayu","archu","vaishu"]'
+   68  vi function1.tf
+   69  cat function1.tf
+   70  vi function1.tf
+   71  cat function1.tf
+   72  vi function1.tf
+   73  cat function1.tf
+   74  vi function1.tf
+   75  cat function1.tf
+   76  terraform plan
+   77  vi function1.tf
+   78  terraform plan
+   79  vi function1.tf
+   80  terraform plan
+   81  cat function1.tf
+   82  ls
+   83  cd Terraform/
+   84  ls
+   85  cd hello-variable/
+   86  ls
+   87  terraform plan
+   88  ls
+   89  cd T
+   90  cd Terraform/
+   91  ls
+   92  cd hello-variable/
+   93  ls
+   94  cd ..
+   95  mkdir map-variable
+   96  cd map-variable/
+   97  touch variable.tf
+   98  yum install vim
+   99  vim variable.tf
+  100  terraform plam
+  101  terraform plan
+  102  cat variable.tf
+  103  vim variable.tf
+  104  cat variable.tf
+  105  vim variable.tf
+  106  terraform plan
+  107  vim variable.tf
+  108  terraform plan
+  109  vim variable.tf
+  110  terraform plan
+  111  vim variable.tf
+  112  terraform plan
+  113  vim variable.tf
+  114  terraform plan
+  115  vim variable.tf
+  116  terraform plan
+  117  terraform plan -var=‘user_info={“gaurav”:”20”,”saurav”:”19”}’
+  118  terraform plan -var=‘user_info={“malhar”:”20”,”ahilya”:”16”}’
+  119  terrform plan
+  120  terraform plan
+  121  vim variable.tf
+  122  cat variable.tf
+  123  cd ..
+  124  ls
+  125  mkdir cmd_map-variable
+  126  cd cmd_map-variable/
+  127  vim variable.tf
+  128  terraform plan -var=‘user_info={“gaurav”:”20”,”saurav”:”19”}’
+  129  terraform plan -var=‘usersage={“gaurav”:”20”,”saurav”:”19”}’
+  130  vim variable.tf
+  131  terraform plan -var=‘usersage={“malhar”:”20”,”saurav”:”19”}’
+  132  terraform plan -var=‘userage={“malhar”:”20”,”saurav”:”19”}’
+  133  vim variable.tf
+  134  terraform plan -var 'usersage={"gaurav":"20", "saurav":"19"}' -var 'username=gaurav'
+  135  terraform plan -var 'usersage={"gaurav":"20", "saurav":"19"}' -var 'username=gaurav'wq
+  136  cd ..
+  137  clear
+  138  ls
+  139  cd map-variable/
+  140  terraform plan -var 'usersage={"gaurav":"20", "saurav":"19"}' -var 'username=gaurav'
+  141  vim variable.tf
+  142  terraform plan -var 'userage={gaurav=10, saurav=20, sazad=23}' -var "user=sazad"
+  143  terraform plan -var 'userage={"gaurav":"20", "saurav":"19"}' -var 'username=gaurav'
+  144  cd ..
+  145  ls
+  146  rm -rf cmd_map-variable/
+  147  ls
+  148  mkdir tf-vars
+  149  cd tf-vars/
+  150  touch variable.tf
+  151  touch first.tf
+  152  vim first.tf
+  153  terraform plan
+  154  vim first.tf
+  155  terraform plan
+  156  vim first.tf
+  157  terraform plan
+  158  vim first.tf
+  159  terraform --syntax --help
+  160  terraform validate
+  161  vim first.tf
+  162  terraform validate
+  163  vim first.tf
+  164  terraform validate
+  165  terraform plan
+  166  touch terraform.tfvars
+  167  history
+  168  ls
+  169  vim terraform.tfvars
+  170  terraform plan
+  171  ls
+  172  vim developement.tfvars
+  173  terraform plan
+  174  terraform plan -var-file=developement.tfvars
+  175  vim developement.tfvars
+  176  terraform plan -var-file=developement.tfvars
+  177  cd ..
+  178  ls
+  179  mkdir tf-vars-custom
+  180  mv tf-vars/developement.tfvars tf-vars-custom/
+  181  cd tf-vars-custom/
+  182  ls
+  183  terraform plan
+  184  cd ..
+  185  cp tf-vars/first.tf tf-vars-custom/
+  186  cd tf-vars-custom/
+  187  ls
+  188  terraform plan
+  189  terraform plan -var-file=developement.tfvars
+  190  cd ..
+  191  mkdir env-variable
+  192  cd env-variable/
+  193  export username=aadishri
+  194  echo username
+  195  echo $username
+  196  vim first.tf
+  197  terraform validate
+  198  terraform plan
+  199  export TF_VARS
+  200  export TF_VARS_username=malhar
+  201  terraform plan
+  202  export TF_VAR_username=malhar
+  203  terraform plan
+  204  export TF_VAR_username=shritej
+  205  terraform plan
+  206  ls
+  207  cd .......
+  208  cd ..
+  209  ls
+  210  mv hello-world.tf hello-variable/
+  211  mv first.tf.json hello-variable/
+  212  ls
+  213  mkdir Git-Repo
+  214  cd Git-Repo/
+  215  vim terraform.tf
+  216  terraform providers
+  217  vim terraform.tf
+  218  terraform providers
+  219  vim terraform.tf
+  220  terraform providers
+  221  terraform validate
+  222  terraform init
+  223  terraform validate
+  224  terraform plan
+  225  ls -a
+  226  cd .terraform/
+  227  ls
+  228  cd providers/
+  229  ls
+  230  cd registry.terraform.io/
+  231  ls
+  232  cd hashicorp/
+  233  ls
+  234  cd github/
+  235  ls
+  236  cd 5.32.0/
+  237  ls
+  238  cd linux_amd64/
+  239  ls
+  240  cat README.md
+  241  ls
+  242  car CHANGELOG.md
+  243  cat CHANGELOG.md
+  244  ls
+  245   cat LICENSE
+  246  ls
+  247  cat terraform-provider-github_v5.32.0
+  248  clear
+  249  pwd
+  250  cd ../../../../
+  251  cd ../../../
+  252  ls
+  253  cat terraform.tf
+  254  terraform plan
+  255  vim terraform.tf
+  256  terraform plan
+  257  terraform apply
+  258  ls
+  259  vim terraform.tfstate
+  260  vim terraform.tf
+  261  terraform plan
+  262  terraform apply
+  263  vim terraform.tfstate
+  264  ls
+  265  vim terraform.tf
+  266  vim terraform.tfstate.backup
+  267  terraform apply
+  268  ls
+  269  vim terraform.tfstate.backup
+  270  vim terraform.tfstate
+  271  terraform destroy
+  272  ls
+  273  terraform apply -auto-approve
+  274  terraform destroy --target github_repository.terraform-third-repo
+  275  terraform plan
+  276  vim terraform.tf
+  277  terraform plan
+  278  vim terraform.tf
+  279  vim provider.tf
+  280  vim variables.tf
+  281  terraform validate
+  282  vim variables.tf
+  283  terraform validate
+  284  vim variables.tf
+  285  terraform validate
+  286  ls
+  287  vim provider.tf
+  288  terraform validate
+  289  vim variables.tf
+  290  vim terraform.tfvars
+  291  terraform validate
+  292  vim variables.tf
+  293  terraform validate
+  294  rm -rf variables.tf
+  295  terraform validate
+  296  vim provider.tf
+  297  terraform validate
+  298  ls
+  299  vim terraform.tf
+  300  touch repositories.tf
+  301  mv terraform.tf repositories.tf
+  302  cp terraform.tf repositories.tf
+  303  cat repositories.tf
+  304  rm -rf terraform.tf
+  305  ls
+  306  mkdir variables.tf
+  307  rm -rf variables.tf/
+  308  ls
+  309  vim variables.tf
+  310  terraform validate
+  311  vim provider.tf
+  312  terraform validate
+  313  terraform plan
+  314  vim repositories.tf
+  315  terraform plan
+  316  vim repositories.tf
+  317  terraform plan
+  318  vim terraform.tfstate
+  319  terraform apply -auto-approv
+  320  vim terraform.tfstate
+  321  terraform console
+  322  cd ..
+  323  ls
+  324  mkdir EC2
+  325  cd EC2/
+  326  ls
+  327  ls -a
+  328  cd ..
+  329  cd EC2/
+  330  cd .
+  331  instance.tf
+  332  touch instance.tf
+  333  vim instance.tf
+  334  cd ..
+  335  cd Git-Repo/
+  336  ;s
+  337  ls
+  338  cd ..
+  339  cd EC2/
+  340  touch provider.tf terraform.tfvars variables.tf
+  341  ls
+  342  vim provider.tf
+  343  cd ..
+  344  cd Git-Repo/
+  345  cat repositories.tf
+  346  cd ..
+  347  cd EC2/
+  348  ls
+  349  vim instance.tf
+  350  terraform plan
+  351  aws init
+  352  history
+  353  terraform init
+  354  terraform plan
+  355  vim instance.tf
+  356  vim provider.tf
+  357  vim instance.tf
+  358  terraform validate
+  359  terraform fmt
+  360  cat provider.tf
+  361  terraform plan
+  362  vim provider.tf
+  363  terraform fmt
+  364  cat provider.tf
+  365  terraform plan
+  366  terraform apply -
+  367  terraform apply -h
+  368  terraform apply  -auto-approve
+  369  vim provider.tf
+  370  vim instance.tf
+  371  terraform apply  -auto-approve
+  372  ls R
+  373  ls Terraform/
+  374  cd EC2/
+  375  ls
+  376  cd Terraform/
+  377  cd EC2/
+  378  ls
+  379  ssh-keygen -t rsa
+  380  ls
+  381  vim instance.tf
+  382  terraform validate
+  383  vim instance.tf
+  384  terraform validate
+  385  cat instance.tf
+  386  cd Terraform/
+  387  cd EC2/
+  388  terraform apply -h
+  389  terraform apply -auto-approve
+  390  cd Terraform/
+  391  cd EC2/
+  392  ls
+  393  vim instance.tf
+  394  fdfdf
+  395  ls
+  396  terraform plan -lock=false
+  397  cat provider.tf
+  398  export TF_VAR_access_key=AKIAQ6FFPXUL3ACTJ3GD
+  399  export TF_VAR_secret_key=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
+  400  terraform plan -lock=false
+  401  vim instance.tf
+  402  terraform validate
+  403  terraform fmt
+  404  terraform validate
+  405  vim instance.tf
+  406  terraform validate
+  407  vim instance.tf
+  408  python
+  409  python3
+  410  vim instance.tf
+  411  terraform plan -lock=false
+  412  vim instance.tf
+  413  terraform plan -lock=false
+  414  env
+  415  vim instance.tf
+  416  vim testscript.sh
+  417  vim instance.tf
+  418  terraform plan -lock=false
+  419  vim instance.tf
+  420  terraform plan -lock=false
+  421  terraform apply -auto-approve -lock=false
+  422  vim instance.tf
+  423  terraform apply -auto-approve -lock=false
+  424  vim instance.tf
+  425  terraform plan -lock=false
+  426  terraform apply -auto-approve -lock=false
+  427  vim instance.tf
+  428  terraform plan -lock=false
+  429  terraform apply -auto-approve -lock=false
+  430  ssh -i id_rsa ec2-user@43.204.36.8
+  431  cd /bin
+  432  ls
+  433  cd /sh
+  434  cd /sh/
+  435  cd sh/
+  436  cd
+  437  cat /tmp/mypublicip.txt
+  438  cat /tmp/yourpublicip.txt
+  439  cat env.txt
+  440  exit
+  441  cd Terraform/
+  442  cd aws-datasource/
+  443  ls
+  444  touch terraform.tf
+  445  vim terraform.tf
+  446  terraform fmt
+  447  terrafrom plan
+  448  terraform plan
+  449  export TF_VAR_secret_key=olVIG6WaGIHhwfkZTSP6N74Aq+/Vfl8+yjDlZlNr
+  450  export TF_VAR_access_key=AKIAQ6FFPXUL3ACTJ3GD
+  451  terraform plan -lock=false
+  452  terraform init
+  453  terraform plan -lock=false
+  454  vim terraform.tf
+  455  terraform validate
+  456  terraform plan -lock=false
+  457  terraform apply -auto-approve -lock=false
+  458  cd ..
+  459  cd EC2/
+  460  vim variables.tf
+  461  vim terraform.tfvars
+  462  cd
+  463  cd Terraform/
+  464  cd aws-datasource/
+  465  cat terraform.tf
+  466  cd ..
+  467  cd EC2/
+  468  vim instance.tf
+  469  vim terraform.tfvars
+  470  vim variables.tf
+  471  terraform fmt
+  472  terraform validate
+  473  vim instance.tf
+  474  vim terraform.tfvars
+  475  vim variables.tf
+  476  terraform plan
+  477  terraform fmt
+  478  terraform validate
+  479  terraform plan
+  480  terraform apply -auto-approve
+  481  terraform destroy -auto-approve
+  482  cd Terraform/
+  483  cd aws-datasource/
+  484  pwd
+  485  cd ..
+  486  cd EC2/
+  487  ls
+  488  pwd
+  489  cd ..
+  490  cp /root/Terraform/EC2/provider.tf //root/Terraform/aws-datasource
+  491  cp /root/Terraform/EC2/variables.tf //root/Terraform/aws-datasource
+  492  cd aws-datasource/
+  493  ls
+  494  vim variables.tf
+  495  vim terraform.tf
+  496  cd Terraform/
+  497  ls
+  498  cd aws-datasource/
+  499  ls
+  500  vim terraform.tf
+  501  cd Terraform/
+  502  cd EC2/
+  503  terraform plan
+  504  terraform plan -lock=false
+  505  ls
+  506  vim terraform.tf
+  507  export TF_VAR_access_key=AKIAQ6FFPXUL3ACTJ3GD
+  508  export TF_VAR_secret_key=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
+  509  terraform destroy -auto-approve -lock=false
+  510  vim terraform.tf
+  511  terraform -version
+  512  vim terraform.tf
+  513  terraform plan -lock=false
+  514  vim terraform.tf
+  515  terraform plan -lock=false
+  516  vim terraform.tf
+  517  terraform plan -lock=false
+  518  cd ..
+  519  cd aws-datasource/
+  520  ls
+  521  touch datasource.tf
+  522  cp terraform.tf datasource.tf
+  523  cat datasource.tf
+  524  rm -rf terraform.tf
+  525  ls
+  526  cd ..
+  527  cd EC2/
+  528  ls
+  529  terraform graph | dot -Tpdf > graph.pdf
+  530  ls
+  531  vi graph.pdf
+  532  terraform graph | dot -Tsvg > graph.svg
+  533  ls
+  534  cat graph.svg
+  535  cat graph.pdf
+  536  terraform graph
+  537  terraform graph  dot -Tsvg > graph.svg
+  538  terraform graph | dot -Tsvg > graph.svg
+  539  terraform init
+  540  vim terraform.tf
+  541  terraform init
+  542  terraform graph > graph.dot
+  543  ls
+  544  cat graph.dot
+  545  yum install graphviz
+  546  dot -v
+  547  dot -Tsvg mygraph.dot -o mygraph1.svg
+  548  dot -Tsvg graph.dot -o mygraph1.svg
+  549  ls
+  550  cat mygraph1.svg
+  551  rpm -q nginx
+  552  yum install nginx
+  553  pwd
+  554  ls
+  555  cd
+  556  cd /etc/nginx
+  557  ls
+  558  cd
+  559  cd /usr/share/nginx/html
+  560  ls
+  561  cat index.html
+  562  vim index.html
+  563  systemctl status nginx
+  564  systemctl start nginx
+  565  ls
+  566  vim index.html
+  567  cd
+  568  add user
+  569  adduser
+  570  adduser malhar
+  571  passwd root
+  572  ls
+  573  pwd
+  574  exit
+  575  pwd
+  576  exit
+  577  cd Terraform/
+  578  cd REMOTE-BACKEND/
+  579  history
+  580  terraform apply -auto-approve
+  581  exit
+  582  cd Terraform/
+  583  cd EC2/
+  584  ls
+  585  rm -rf graph.svg graph.pdf
+  586  ls
+  587  terraform workspace list
+  588  cd ..
+  589  mkdir TF-Workspace
+  590  cd TF-Workspace/
+  591  terraform workspace list
+  592  terraform workspace new dev
+  593  terraform workspace show
+  594  terraform workspace new prod
+  595  ls
+  596  cd terraform.tfstate.d/
+  597  ls
+  598  cd dev/
+  599  ls
+  600  cd ..
+  601  cd prod/
+  602  ls
+  603  terraform workspace list
+  604  cd
+  605  cd Terraform/
+  606  cd TF-Workspace/
+  607  terraform workspace list
+  608  terraform workspace --help
+  609  terraform workspace select --help
+  610  terraform workspace select dev
+  611  terraform workspace new malhar
+  612  terraform workspace delete malhar
+  613  terraform workspace select dev
+  614  terraform workspace delete malhar
+  615  terraform workspace show
+  616  terraform apply -auto-approve
+  617  ls
+  618  cp /root/Terraform/EC2/instance.tf /.
+  619  ls
+  620  cp /root/Terraform/EC2/instance.tf /root/Terraform/TF-Workspace/
+  621  ls
+  622  cp /root/Terraform/EC2/provider.tf /root/Terraform/TF-Workspace/
+  623  cp /root/Terraform/EC2/variables.tf /root/Terraform/TF-Workspace/
+  624  cp /root/Terraform/EC2/terraform.tfvars /root/Terraform/TF-Workspace/
+  625  cp /root/Terraform/EC2/terraform.tf /root/Terraform/TF-Workspace/
+  626  ls
+  627  vim instance.tf
+  628  vim provider.tf
+  629  ls
+  630  vim terraform.tfvars
+  631  vim variables.tf
+  632  terraform fmt
+  633  terraform init
+  634  ls
+  635  terraform plan
+  636  vim instance.tf
+  637  terraform plan
+  638  ls
+  639  ls -a
+  640  touch dev-terraform.tfvars
+  641  touch prod-terraform.tfvars
+  642  cat terraform.tf
+  643  cat terraform.tfvars
+  644  vim dev-terraform.tfvars
+  645  vim prod-terraform.tfvars
+  646  terraform workspace show
+  647  terraform apply --auto-approve --var-file dev-terraform.tfvars
+  648  terraform destroy --auto-approve --var-file dev-terraform.tfvars
+  649  ls
+  650  cd terraform.tfstate.d/
+  651  ls
+  652  cd dev/
+  653  ls
+  654  cd
+  655  cd Terraform/
+  656  mkdir TF-Modules
+  657  cd TF-Modules/
+  658  cd ..
+  659  ls
+  660  cd TF-Workspace/
+  661  ls
+  662  cp instance.tf provider.tf terraform.tf terraform.tfvars variables.tf /root/Terraform/TF-Modules/
+  663  cd ..
+  664  cd TF-Modules/
+  665  ls
+  666  mkdir modules
+  667  cd modules/
+  668  mkdir webserver
+  669  cd webserver/
+  670  touch resource.tf
+  671  cd ../../..
+  672  cd TF-Modules/
+  673  cat instance.tf
+  674  vim instance.tf
+  675  cd modules/
+  676  cd webserver/
+  677  vim resource.tf
+  678  cd ../..
+  679  ls
+  680  vim instance.tf
+  681  history
+  682  terraform fmt
+  683  terraform validate
+  684  terraform init
+  685  terraform validate
+  686  vim variables.tf
+  687  ls
+  688  cd modules/webserver/
+  689  ls
+  690  vim variable.tf
+  691  cd ../..
+  692  cat terraform.tfvars
+  693  cd modules/webserver/
+  694  ls
+  695  cat variable.tf
+  696  ls
+  697  vim resource.tf
+  698  cd ../..
+  699  terraform plan
+  700  cp terraform.tfvars /root/Terraform/TF-Modules/modules/webserver/
+  701  terraform plan
+  702  cd modules/webserver/
+  703  ls
+  704  cat variable.tf
+  705  terraform validate
+  706  terraform init
+  707  terraform validate
+  708  cd ../..
+  709  ls
+  710  vim instance.tf
+  711  terraform validate
+  712  import TF_VAR_acess_key=AKIAQ6FFPXUL3ACTJ3GD
+  713  export TF_VAR_acess_key=AKIAQ6FFPXUL3ACTJ3GD
+  714  export TF_VAR_secret_key=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
+  715  terraform validate
+  716  vim variables.tf
+  717  terraform fmt
+  718  terraform validate
+  719  vim terraform.tfvars
+  720  ls
+  721  vim instance.tf
+  722  terraform validate
+  723  vim instance.tf
+  724  terraform validate
+  725  vim variables.tf
+  726  terraform validate
+  727  terraform plan
+  728  export TF_VAR_acess_key=AKIAQ6FFPXUL3ACTJ3GD
+  729  export TF_VAR_secret_key=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
+  730  terraform plan
+  731  terraform plan -lock=false
+  732  export TF_VAR_access_key=AKIAQ6FFPXUL3ACTJ3GD
+  733  terraform plan
+  734  terraform plan -lock=false
+  735  cp /root/Terraform/EC2/id_rsa /root/Terraform/TF-Modules/
+  736  ks
+  737  ls
+  738  cp /root/Terraform/EC2/id_rsa.pub /root/Terraform/TF-Modules/
+  739  vim instance.tf
+  740  cd modules/webserver/
+  741  vim resource.tf
+  742  vim variable.tf
+  743  vim resource.tf
+  744  terraform fmt
+  745  vim resource.tf
+  746  terraform fmt
+  747  wq
+  748  vim resource.tf
+  749  terraform fmt
+  750  terraform validate
+  751  vim terraform.tfvars
+  752  terraform fmt
+  753  vim variable.tf
+  754  vim resource.tf
+  755  vim output.tf
+  756  cd ../..
+  757  vim instance.tf
+  758  terraform plan
+  759  terraform plan -lock=false
+  760  vim instance.tf
+  761  terraform plan -lock=false
+  762  vim instance.tf
+  763  terraform plan -lock=false
+  764  vim instance.tf
+  765  terraform plan -lock=false
+  766  cd modules/webserver/
+  767  vim output.tf
+  768  cd ../..
+  769  terraform plan -lock=false
+  770  vim instance.tf
+  771  terraform fmt
+  772  terraform apply -auto-approve
+  773  terraform apply -auto-approve -lock=false
+  774  vim instance.tf
+  775  terraform apply -auto-approve -lock=false
+  776  vim variables.tf
+  777  cd modules/webserver/
+  778  vim variable.tf
+  779  cd ../..
+  780  vim variables.tf
+  781  terraform apply -auto-approve -lock=false
+  782  terraform destroy -auto-approve -lock=false
+  783  cd ..
+  784  mkdir REMOTE-BACKEND
+  785  cd REMOTE-BACKEND/
+  786  vim instance.tf
+  787  aws
+  788  aws configure
+  789  terraform init
+  790  vim instance.tf
+  791  terraform init
+  792  terraform plan
+  793  terraform fmt
+  794  terraform validate
+  795  terraform init
+  796  vim instance.tf
+  797  terraform validate
+  798  terraform plan
+  799  vim instance.tf
+  800  ls
+  801  cd .terraform/
+  802  ls
+  803  vim instance.tf
+  804  cd ..
+  805  ls
+  806  vim instance.tf
+  807  rm -rvf .terraform/
+  808  terraform plan
+  809  terraform init
+  810  ls -a
+  811  terraform plan
+  812  terraform apply
+  813  vim instance.tf
+  814  terraform plan
+  815  vim instance.tf
+  816  terraform plan
+  817  terraform destroy
+  818  vim instance.tf
+  819  terraform apply
+  820  terraform init
+  821  ls
+  822  ls
+  823  ls -a
+  824  cd .terraform/
+  825  ls
+  826  cat terraform.tfstate
+  827  cd ..
+  828  vim instance.tf
+  829  terraform apply
+  830  terraform destroy
+  831  terraform apply -auto-approve
+  832  ls
+  833  terraform destroy -auto-approve
+  834  vim instance.tf
+  835  terraform apply -auto-approve
+  836  vim instance.tf
+  837  terraform apply -auto-approve
+  838  terraform init
+  839  ls
+  840  terraform apply -auto-approve
+  841  terraform apply -auto-approve -lock=false
+  842  ls
+  843  vim instance.tf
+  844  terraform apply -auto-approve -lock=false
+  845  terraform apply -auto-approve
+  846  terraform apply -auto-approve -lock=false
+  847  vim instance.tf
+  848  terraform apply -auto-approve -lock=false
+  849  terraform destroy -auto-approve -lock=false
+  850  terraform apply -auto-approve -lock=false
+  851  terraform destroy -auto-approve
+  852  terraform apply -auto-approve
+  853  exit
+  854  cd Terraform/
+  855  cd R
+  856  cd REMOTE-BACKEND/
+  857  terraform destroy -auto-approve
+  858  ls
+  859  pwd
+  860  exit
+  861  cd Terraform/
+  862  git remote show origin
+  863  history
